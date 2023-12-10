@@ -23,6 +23,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Mate+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://smtpjs.com/v3/smtp.js">
+  
+</script>
 </head>
 
 <body >
@@ -112,8 +115,9 @@
 
 
       <div class="row about-padding">
-        <div class="col-lg-12 col-md-12 col-sm-12 text-left ">
-            <h1 class="about-h1">Contact Us for Various Services:</h1>
+        <h1 class="about-h1">Contact Us for Various Services:</h1>
+        <div class="col-lg-5 col-md-12 col-sm-12 text-left ">
+            
 
           <h6 class="contact-h2">Email</h6>
           <p class="about-para-1"><a  href="mailto:wynesconsulting@gmail.com ">wynesconsulting@gmail.com </a> or <a  href="mailto:ahwyne@gmail.com">ahwyne@gmail.com  </a> (Please send your requests through email) </p>
@@ -127,6 +131,35 @@
              </p>
 
         </div>
+        <div class="col-lg-7 col-md-12 col-sm-12 text-left form-div ">
+          <h2>Contact Us</h2>
+          <form onsubmit="sendEmail(event);"> 
+            <div class="form-group">
+              <label for="name" class="align-label">Name</label>
+              <input type="text" class="form-control text-field" id="name"  placeholder="Enter name" required>
+            
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1 " class="align-label ">Email address</label>
+              <input type="email" class="form-control text-field"" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+             
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="align-label">Subject</label>
+              <input type="text" class="form-control text-field" id="subject"  placeholder="Enter Subject" required>
+            
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="align-label">Message</label>
+              <textarea  class="form-control text-field"" id="message" placeholder="Tell us what you want" rows="8" required></textarea>
+            
+            </div>
+           
+          
+            <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+        </div>
        
        
       </div>
@@ -136,8 +169,43 @@
 
 
 
-<script src="papd.js" charset="utf-8"></script>
+<!-- <script src="papd.js" charset="utf-8"></script> -->
+
+
+
+<script>
+  
+  function sendEmail(event){
+    event.preventDefault();
+   
+    var namef = document.getElementById("name").value;
+var emailf = document.getElementById("email").value;
+var messagef = document.getElementById("message").value;
+var subjectf = document.getElementById("subject").value;
+var body = "Name " +" : "+namef + "<br>" + "Email " +" : " + emailf + "<br>"+  "Subject " +" : " +subjectf + "<br>" +  "Message " +" : " +messagef;
+    console.log("funct");
+    console.log(namef);
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "shehzaibaliawn@gmail.com",
+    Password : "75E853F4755A3823162EE3FAEB4807CE3114",
+    To : 'shehzaibaliawan@gmail.com',
+    From : "shehzaibaliawan@gmail.com",
+    Subject : "This is the subject",
+    Body : body
+}).then(
+  message => alert(message)
+);
+  document.getElementById("name").value="";
+ document.getElementById("email").value="";
+document.getElementById("message").value="";
+ document.getElementById("subject").value="";
+  }
+
+  
+</script>
 </body>
+
 <!--=============================================== footer ====================================-->
 <footer id="footer">
   <div class=" footer">
