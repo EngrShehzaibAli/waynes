@@ -182,7 +182,7 @@
 var emailf = document.getElementById("email").value;
 var messagef = document.getElementById("message").value;
 var subjectf = document.getElementById("subject").value;
-var body = "Name " +" : "+namef + "<br>" + "Email " +" : " + emailf + "<br>"+  "Subject " +" : " +subjectf + "<br>" +  "Message " +" : " +messagef;
+var body = "Name " +" : "+namef + "<br><br>" + "Email " +" : " + emailf + "<br><br>"+  "Subject " +" : " +subjectf + "<br><br>" +  "Message " +" : " +messagef;
     console.log("funct");
     console.log(namef);
     Email.send({
@@ -191,7 +191,7 @@ var body = "Name " +" : "+namef + "<br>" + "Email " +" : " + emailf + "<br>"+  "
     Password : "75E853F4755A3823162EE3FAEB4807CE3114",
     To : 'shehzaibaliawan@gmail.com',
     From : "shehzaibaliawan@gmail.com",
-    Subject : "This is the subject",
+    Subject : "mail  from waynesoralhealth ",
     Body : body
 }).then(
   message => alert(message)
