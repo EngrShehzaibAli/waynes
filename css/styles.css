@@ -200,8 +200,10 @@ hr {
 
 /*----------------------- footer classes -----------------*/
 .footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  /* height: 100vh; */
   background-color: #6b429b;
 }
 
@@ -432,5 +434,50 @@ hr {
   }
   .about-paragraph1 {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 765px) {
+  .footer-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 100%;
+  }
+  .padding-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-section-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 630px) {
+  .footer-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 100%;
+  }
+  .padding-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-section-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .logo-div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo {
+    height: 50px;
+    padding-top: 0 !important;
+  }
+  .logo-txt {
+    font-size: 20px;
+  }
+  .logo-text-sub {
+    font-size: 1rem;
   }
 }
