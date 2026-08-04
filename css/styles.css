@@ -52,7 +52,9 @@ hr {
 } */
 .logo-div {
   width: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2px auto 0 10px;
   line-height: 1.5;
   padding-left: 20%;
@@ -63,21 +65,21 @@ hr {
 
 .logo {
   width: auto;
-  height: 80px;
-  border-radius: 100%;
+  height: 190px;
+  max-width: 100%;
 }
 
-.logo-txt {
-  font-family: 'Montserrat';
-  color: #800080;
-  padding-bottom: 0;
-  font-style: bolder;
-  margin-bottom: 0;
-}
+.logo-txt,
 .logo-text-sub {
-  font-family: 'Montserrat';
-  color: #800080;
-  font-size: 1.5rem;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 /* -------------------------------------Navbar Designing -----------------------------------------*/
 /* .sticky-top{
@@ -355,12 +357,8 @@ hr {
     padding-left: 14%;
     padding-right: 14%;
   }
-  .logo-txt {
-    font-family: 'Montserrat';
-    color: #800080;
-    padding-top: 25px;
-    font-style: bolder;
-    font-size: 30px;
+  .logo {
+    height: 165px;
   }
 
   /*  --------------------------------------navbar classes ---------------*/
@@ -407,12 +405,8 @@ hr {
   }
   /*------------------ top logo classes ---------------------*/
 
-  .logo-txt {
-    font-family: 'Montserrat';
-    color: #800080;
-    padding-top: 35px;
-    font-style: bolder;
-    font-size: 30px;
+  .logo {
+    height: 140px;
   }
   .logo-div {
     padding-left: 11%;
@@ -471,13 +465,7 @@ hr {
     padding-right: 0;
   }
   .logo {
-    height: 50px;
+    height: 110px;
     padding-top: 0 !important;
-  }
-  .logo-txt {
-    font-size: 20px;
-  }
-  .logo-text-sub {
-    font-size: 1rem;
   }
 }
